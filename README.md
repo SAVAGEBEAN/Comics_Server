@@ -1,6 +1,8 @@
 # Comics_Server
 -Run on localhost
-
+  
+  This project requires NodeJs if you don't have install donwload it from here `https://nodejs.org/en/download`
+  
   Create a folder of any name
   
   open the terminal in abouve directory
