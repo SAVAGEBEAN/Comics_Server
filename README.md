@@ -1,17 +1,25 @@
 # Comics_Server
 -Run on localhost
 
-  create a folder of any name
+  Create a folder of any name
   
-  open terminal
+  open the terminal in abouve directory
   
   ```bash
-  git clone "https://github.com/SAVAGEBEAN/Comics_Server.git" into a specific folder
+  git clone "https://github.com/SAVAGEBEAN/Comics_Server.git"
   ```
-  cmd -> npm install (Install all require packages)
   
-  add .env file
-  Specify Port,Mongodb Connection link, Token Secret for JWT authentication,
+  Installing dependencies
+  ```bash
+  npm install
+  ```
   
-  cmd -> npm start
-  :)
+  **Create .env file and add values of exactly these names**
+  * `PORT` for running server on this port.
+  * `DB_CONNECTION` Database connection link.
+  * `TOKEN_SECRET` For user authentication from JWT.
+  
+  To Run the server on localhost:
+  ```bash
+  npm start
+  ```
