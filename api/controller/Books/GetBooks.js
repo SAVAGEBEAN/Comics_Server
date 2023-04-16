@@ -17,6 +17,7 @@ const Book = async(req,res)=>{
     //Fetching a specific book from book id
     const _id = req.body._id;
     const findBook = await Books.findById({_id:_id});
+    if(!findBook) return res.send("Not Found!")
     res.send(findBook);
 }
 module.exports = {
