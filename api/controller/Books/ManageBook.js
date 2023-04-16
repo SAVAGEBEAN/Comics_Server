@@ -2,12 +2,14 @@ const Books = require("../../models/Books")
 
 const UpdateBook = async(req,res) =>{
     //Filter for searching a Book want's to update
-    const Filter = req.body.filter;
+    const BookName = req.body.bookname;
 
     //new data which is to updated
     const UpdateData = req.body.data;
     try {
-        const Updated = await Books.findOneAndUpdate(Filter,UpdateData,{new:true});
+        if(!await Books.findOne({BookName})) return res.send("Book Not Found!")
+        const Updated = await Books.findOneAndUpdate(BookName,UpdateData,{new:true});
+        
         res.send(Updated);
     } catch (error) {
         res.send(error)

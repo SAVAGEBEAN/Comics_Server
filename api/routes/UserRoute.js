@@ -6,7 +6,7 @@ const User = require('../models/User');
 
 //get Logged in Username
 Router.get('/', VerifyUser, async(req,res)=>{
-    res.send(await User.findOne({_id : req.user._id}),'Username');
+    res.send((await User.findOne({_id : req.user._id})).Username);
 });
 
 //Router for creating or Signup of user
